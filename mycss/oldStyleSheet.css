@@ -1,0 +1,668 @@
+﻿/* https://developer.mozilla.org/en-US/docs/Glossary/Semantics */
+
+/*set font for headers*/
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+/*set margn for body*/
+
+body {
+  margin: 0;
+}
+
+/*set font for html and body*/
+
+html,
+body {
+/*  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block
+}
+
+/* <a> achor tags settings */
+
+a {
+  color: inherit;
+  background-color: transparent;
+  display: inline-block;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+
+small {
+  font-size: 80%
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sub {
+  bottom: -0.25em
+}
+
+sup {
+  top: -0.5em
+}
+
+figure {
+  margin: 1em 40px
+}
+
+img {
+  border-style: none
+}
+
+svg:not(:root) {
+  /*overflow: hidden*/
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+
+h1 {
+  font-size: 36px
+}
+
+h2 {
+  font-size: 30px
+}
+
+h3 {
+  font-size: 24px
+}
+
+h4 {
+  font-size: 20px
+}
+
+h5 {
+  font-size: 18px
+}
+
+h6 {
+  font-size: 16px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0
+}
+
+img {
+  /*vertical-align: middle;*/
+}
+
+.btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.badge {
+  border-radius: 50%
+}
+
+/* set style for buttons */
+
+.btn {
+  background-color: #111;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover {
+  background-color: #4CAF50;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* project image */
+
+.projectImg {
+  width: 25px;
+  height: 25px;
+}
+
+/*set wrapper for when using grids to style*/
+
+.wrapper {}
+
+/* Navigation */
+
+/*Resposive tool bar------------------------------------------*/
+
+nav {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+nav:hover {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+ul.main-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.main-nav li {
+  float: left;
+}
+
+ul.main-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.main-nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul.main-nav li a.active {
+  background-color: #4CAF50;
+}
+
+ul.main-nav li.right {
+  float: right;
+}
+
+ul.main-nav li.right a:hover {
+  background-color: #4CAF50;
+}
+
+/* main section 
+( <div> tag used to keep the fixed Main Navigation from overlapping.)*/
+
+.main {
+  margin-top: 50px;
+  padding: 0 15px 0 15px;
+  background-color: white;
+}
+
+/* set style for section */
+
+section {
+  width: inherit;
+  overflow: hidden;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 5px 15px 15px 15px;
+  margin: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* usually a class of section. 
+    Use for adding the speacial flow of items. (.infoSmall) */
+
+.boxes {
+  width: inherit;
+  display: inline-block;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  /*justify-content:center;*/
+}
+
+/* info (info is usaually a class of a section.)*/
+
+.infoSmall {
+  overflow: hidden;
+  float: left;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  margin: inherit;
+  padding: 15px 15px 15px 15px;
+  min-width: 50px;
+  max-width: 200px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* attempt to ensure all the reads links align on the bottom. */
+
+.infoSmall>*:last-child {
+  align-self: flex-end;
+}
+
+/*highlight when hover*/
+
+.infoSmall:hover {
+  border: 2px solid #4CAF50;
+}
+
+/* Top Container add styling to speaical sections
+    (Welcome on home page) */
+
+.top-container {
+  padding: 15px 15px 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* set style for showcase (showcase is the header displayed at begining)*/
+
+.showcase {
+  position: relative;
+  margin: 0 -15px 0 -15px;
+  overflow: hidden;
+}
+
+.showcase>img {
+  height: 300px;
+  opacity: 0.3;
+  width: 100%;
+  display: block;
+}
+
+.showcase>h1 {
+  position: absolute;
+  top: 10%;
+  font-size: 136px;
+  text-align: center;
+  color: Black;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.showcase p {
+  font-size: 25px;
+  margin: 0;
+}
+
+/*Use to style the line under the frist welcome screen at the beging*/
+
+.Headliner {
+  width: 50%;
+  border-top: 2px solid #eee;
+  margin: 0 0;
+}
+
+/* use as a class that contains a list of Project (<ul>) */
+
+.projectWrapper {
+  width: 100%;
+  list-style-type: none;
+  display: inline-block;
+  display: inline-block;
+  display: flex;
+  padding: 0px 20px 0px 20px;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-around;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex: 1;
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+}
+
+/* This class set the style of the Projects. */
+
+.project {
+  width: inherit;
+  float: left;
+  flex-basis: 700px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  margin: 15px;
+  padding: 15px;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/*hightligt project when hovered over*/
+
+.project:hover {
+  border: 2px solid #4CAF50;
+}
+
+/*project header*/
+
+.project h3 {
+  display: block;
+  overflow: hidden;
+}
+
+/*project type icon*/
+
+.project i {
+  vertical-align: middle;
+}
+
+/*project img*/
+
+.project img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*This class serve as the description for the Projects.*/
+
+.description {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 0px .25em 0px;
+}
+
+/*project img*/
+
+.project p {
+  font-size: .8em;
+}
+
+/* class use to keep the checkbox invisiable.*/
+
+.read-more-state {
+  display: none;
+}
+
+/* the target text that is hidden (span) tag. */
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+/* class use to draw the trigger 
+    (Read More/Less) button.  */
+
+.read-more-trigger {
+  padding: 0 .5em;
+  line-height: 2;
+  border-radius: .25em;
+  background-color: #111;
+  color: white;
+  float: right;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.read-more-trigger:hover {
+  background-color: #4CAF50;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* classes used for displaying text on read me button
+    based one the check state. */
+
+.read-more-state~.read-more-trigger:before {
+  content: 'Read More';
+}
+
+.read-more-state:checked~.read-more-trigger:before {
+  content: 'Read Less';
+}
+
+/* while checked the span tag (read-more-target)
+    is set to display. */
+
+.read-more-state:checked~.read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.top {
+  font-size: 32px;
+  margin: 21px 0;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  background-color: #333;
+  margin: 0px 0px 0px 0px;
+  padding: 6px 0px 6px 0px;
+}
+
+.foot {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  background-color: #333;
+  margin: 0px 0px 0px 0px;
+  padding: 6px 0px 6px 0px;
+}
+
+/*--------------------------------------------------------------*/
+
+/* Media Queries */
+
+/* When screen is 885px and less */
+
+@media screen and (max-width: 885px) {
+  .showcase>h1 {
+    position: absolute;
+    top: 10%;
+    font-size: 100px;
+    text-align: center;
+    color: Black;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .showcase p {
+    font-size: 25px;
+    margin: 0;
+  }
+  section {
+  margin: 5px 5px 15px 5px;
+  }
+
+}
+
+/* When screen is 600px and less */
+
+@media screen and (max-width: 650px) {
+  .showcase>h1 {
+    position: absolute;
+    top: 10%;
+    font-size: 80px;
+    text-align: center;
+    color: Black;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .showcase p {
+    font-size: 25px;
+    margin: 0;
+  }
+  /*set style for the Resume */
+  .resume {
+    padding: 5px;
+  }
+  
+  section {
+  margin: 5px 5px 15px 5px;
+  }
+}
+
+/* When screen is 600px and less */
+
+@media screen and (max-width: 600px) {
+
+.showcase {
+    margin: 0 -5px 0 -5px;
+     
+  }  
+
+ul.main-nav li.right,
+  ul.main-nav li {
+    float: none;
+  }
+  nav {
+    position: relative;
+  }
+  .main {
+    margin-top: 0px;
+    padding: 0 5px 0 5px;
+    background-color: white;
+  }
+  .showcase>h1 {
+    position: absolute;
+    top: 10%;
+    font-size: 70px;
+    text-align: center;
+    color: Black;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .showcase p {
+    font-size: 25px;
+    margin: 0;
+  }
+  /* usually a class of section. 
+    Use for adding the speacial flow of items. (.infoSmall) */
+  .boxes {
+    justify-content: space-around;
+  }
+  .resume {
+    padding: 5px;
+  }
+
+  section {
+  margin: 5px 5px 15px 5px;
+  }
+
+ .project
+  {
+      margin: 0px 0px 15px 0px;
+   
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .showcase p {
+    font-size: 15px;
+    margin: 0;
+  }
+  .resume {
+    padding: 5px;
+  }
+  
+section {
+  margin: 5px 5px 15px 5px;
+  }
+}
+
+/* for printing whole version of webpage */
+
+@page {
+  size: A4;
+}

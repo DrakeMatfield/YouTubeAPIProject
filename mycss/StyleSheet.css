@@ -1,0 +1,308 @@
+﻿*
+{
+    box-sizing: border-box;
+}
+
+html, body
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+html
+{
+}
+
+body
+{
+    /* background-repeat: no-repeat;     background-position: right top;     margin-right: 200px;     background-attachment: fixed;*/
+}
+
+/* <a> achor tags settings */
+a
+{
+    color: inherit;
+    background-color: transparent;
+    display: inline-block;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:active, a:hover
+{
+    outline-width: 0;
+}
+
+
+
+
+
+/*set wrapper for when using grids to style*/
+
+.wrapper
+{
+}
+
+/* Navigation */
+
+/*Resposive tool bar------------------------------------------*/
+
+nav
+{
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+nav:hover
+{
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+ul.main-nav
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.main-nav li
+{
+    float: left;
+}
+
+ul.main-nav li a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.main-nav li a:hover:not(.active)
+{
+    background-color: #111;
+}
+
+ul.main-nav li a.active
+{
+    background-color: #4CAF50;
+}
+
+ul.main-nav li.right
+{
+    float: right;
+}
+
+ul.main-nav li.right a:hover
+{
+    background-color: #4CAF50;
+}
+
+nav .search-container
+{
+    float: right;
+}
+
+nav .search-container label
+{
+    color: white;
+}
+
+nav input[type=text]
+{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+nav .search-container button
+{
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .search-container button:hover
+{
+    background: #ccc;
+}
+
+
+.main
+{
+    margin-top: 90px;
+    padding: 0 15px 0 15px;
+    background-color: transparent;
+}
+
+.test
+{
+    /*background: url(  'images/Sky/p10101.jpg' );     background-position: center;     background-repeat: no-repeat;     background-size: cover;     background-attachment: fixed;     opacity: .03;     z-index: -1; */
+}
+
+footer
+{
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    background-color: #333;
+    margin: 0px 0px 0px 0px;
+    padding: 6px 0px 6px 0px;
+}
+
+/* used for switches */
+.switch
+{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input
+{
+    display: none;
+}
+
+.slider
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.slider:before
+{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input:checked + .slider
+{
+    background-color: #4CAF50;
+}
+
+input:focus + .slider
+{
+    box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .slider:before
+{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round
+{
+    border-radius: 34px;
+}
+
+.slider.round:before
+{
+    border-radius: 50%;
+}
+
+#id_notifer_label
+{
+    margin-left: 65px;
+    display: inline-block;
+}
+
+input ~ #id_notifer_label:after
+{
+    content: " off";
+}
+
+input:checked ~ #id_notifer_label:after
+{
+    content: " on";
+}
+
+#id_WorkerNotifier
+{
+    position: relative;
+    display: block;
+    background-image: url( 'images/cloudG.gif' );
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 43px;
+    top: 0px;
+    left: 0px;
+    
+}
+
+
+
+@media screen and (max-width: 600px)
+{
+    nav
+    {
+        float: none;
+        position:relative;
+       
+    }
+    nav .search-container
+    {
+        float: none;
+       
+    }
+    nav a, nav input[type=text], nav .search-container button
+    {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    nav input[type=text]
+    {
+        border: 1px solid #ccc;
+    }
+    ul.main-nav li.right
+    {
+        float: none;
+    }
+    .main
+    {
+        margin-top: 20px;
+        padding: 0 15px 0 15px;
+        background-color: transparent;
+    }
+}
+
