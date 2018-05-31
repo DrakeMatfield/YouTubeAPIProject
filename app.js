@@ -71,11 +71,11 @@ function Check_API_For_Key() {
 
 function Get_API_For_Key() {
   if(APIKey == ""){
-  	APIKey = prompt("Please re-enter an API key", "ex: BIzaSyBqZZXcigk3k4JuR6h1m5B0tBzY6B-AVBM");   
+  	APIKey = prompt("Please enter an API key", "ex: BIzaSyBqZZXcigk3k4JuR6h1m5B0tBzY6B-AVBM");   
   }
   else
   {
-    APIKey = prompt("Please enter an API key:", APIKey);   
+    APIKey = prompt("Please re-enter an API key:", APIKey);   
   }
 }
 
